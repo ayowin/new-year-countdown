@@ -1,0 +1,41 @@
+{
+  "name": "new-year-countdown",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "buildExe": "electron-builder --dir",
+    "buildSetup": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "electron-builder": "^24.9.1"
+  },
+  "build":{
+    "copyright": "copyright",
+    "directories": {
+      "output": "./output"
+    },
+    "extraResources": [
+      {
+        "from": "resources/", 
+        "to": ""
+      }
+    ],
+    "win": {
+      "target": [
+          {
+            "target": "nsis",
+            "arch": [
+              "x64"
+            ]
+          }
+      ]
+    },
+    "nsis":{
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

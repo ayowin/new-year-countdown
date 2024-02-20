@@ -1,0 +1,29 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    text-align: center;
+    font-size: 0px;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#root::before{
+    display: inline-block;
+    vertical-align: middle;
+    width: 0px;
+    height: 100%;
+    content: "";
+}
+
+#canvas{
+	display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
